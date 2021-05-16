@@ -43,70 +43,37 @@ Script Updated By: 修订者
 Update Details: 修订详情，修订部分的描述
 PlayResX: 1280
 PlayResY: 720
-PlayDepth: 颜色深度
-Collsions: Normal
-Timer: 100.0000
 ```
 
-下面就`[Script Info]`这一部分作简单说明：
+除固定字段 `ScriptType` 以外，其余信息均可在 Aeg 的 "脚本配置" 窗口进行设置。
 
-* ASS文件第一行必须是`[Script Info]`
+![](images\DialogProperties.png)
 
-* `;`后面可以填写任何内容
+下面就 `[Script Info]` 这一部分作简单说明：
 
-* `!:`后面是注释部分
-
-* `Title:`脚本文件的标题
-
-* `ScriptType:`脚本格式`ASS`文件为`v4.00+`
-
-* `WrapStyle:`指定了当一行字幕过长时的**换行方式**
-
-  共有4种换行方式：
-
-  `0`:智能换行：上行较宽
-
-  `1`:于行尾词出换行：仅于`\N`后断行
-
-  `2`:不自动换行：于`\n`和`\N`后断行
-
-  `3`：智能换行：下行较宽
-
-* `ScaledBorderAndShadow:`字幕边框宽度和阴影深度是否随着视频分辨率等比缩放，`yes`或`no`
-
-* `YCbCr Matrix:`
-
+* ASS 文件第一行必须是 `[Script Info]`
+* `;` 后面是注释部分。可以填写任何内容，但在 Aeg 保存后会丢失。  
+    前两行注释为 Aegisub 自动生成的，保存时会自动更新。
+* `Title:` 脚本文件的标题
+* `ScriptType:` `ASS` 脚本固定为 `v4.00+`，其他值会报错。
+* `WrapStyle:` 指定了当一行字幕过长时的**换行方式**  
+    共有4种换行方式：
+    + `0`: 智能换行：上行较宽
+    + `1`: 于行尾词出换行：仅于 `\N` 后断行
+    + `2`: 不自动换行：于 `\n` 和 `\N` 后断行
+    + `3`: 智能换行：下行较宽
+* `ScaledBorderAndShadow:` 字幕边框宽度和阴影深度是否随着视频分辨率等比缩放，`yes` 或 `no`
+* `YCbCr Matrix:` 颜色空间转换
 * `Original Script:` 脚本原作者
-
 * `Original Translation:` 译者
-
 * `Original Editing:` 编辑
-
 * `Original Timing:` 时间轴人员
-
 * `Synch Point:` 同步点
-
 * `Script Updated By:` 脚本修订者
-
 * `Update Details:` 修订详情，修订部分的描述
+* `PlayResX:` 视频宽度；`PlayResY:` 视频高度，这两个定义了视频的分辨率
+* 未列出的字段如：`PlayDepth`, `Collisions`, `Timer` 均已废弃
 
-* `PlayResX:` 视频宽度`PlayResY:` 视频高度，这两个定义了视频的分辨率
-
-* `PlayDepth:` 显示颜色深度
-
-* `Collsions:` 字幕碰撞处理，当两条字幕重叠时，如何进行移动，共有两种方式
-
-  `Normal`：后一条字幕出现在前一条的上方
-
-  `Reverse`：前一条字幕向上移动给后一条字幕让位
-
-* `Timer:` 时间轴计时器，单位为`%`，默认为`100.0000`
-
-  大于`100`时，字幕会比预定越来越早的出现
-
-  小于`100`时，字幕会比预定越来越晚的出现
-
-  一般不改变，取默认`100.0000`
 
 ## 第二部分 [V4+ Styles]
 
