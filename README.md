@@ -1,8 +1,25 @@
-# ASS字幕文件说明
+ASS v4.00+ 字幕文件说明
+======================
 
-*这是我多年前所做的笔记，资料都是从网上摘抄，其中内容难免有缺失或错误。*
 
-## 第一部分 [Script Info]
++ ASS 字幕文件格式由 SSA 字幕格式修改而来。SSA v4.00+ 格式即为 ASS 字幕格式
++ Aegisub 为字幕编辑软件。编辑好的 ASS 字幕需要经过渲染才能显示出来
++ [常见的渲染后端][ass-impl]有：
+    [`libass`][libass]（Aeg 和[大多数软件][libass-user]默认后端）、
+    [VSFilter][VSFilter]、[xy-VSFilter][VSFilter]、[VSFilterMod][VSFilterMod]
++ 参考资料
+    + Aegisub ASS 解析实现细节，是当前的事实规范：[Aeg/ASS v4+ 脚本解析实现](https://www.yuque.com/woclass/aeg/aeg-assv4p)
+    + Aegisub 3.2 中文文档：[ASS特效标签](https://aegi.vmoe.info/docs/3.2/ASS_Tags/)
+    + 英文原版 ASS v4+ 规范，仅作历史参考用：[ASS v4.00+ 字幕文件规范](https://www.yuque.com/woclass/aeg/ass-v4.00plus)
+    + libass 库的 ASS v5 规范草稿：[ASS v5.0 · libass/libass Wiki](https://github.com/libass/libass/wiki/ASS-v5.0)
+
+[libass]: https://github.com/libass/libass
+[libass-user]: https://github.com/libass/libass#related-links
+[ass-impl]: https://github.com/libass/libass#other-assssa-implementations
+[VSFilter]: https://github.com/pinterf/xy-VSFilter/releases/latest
+[VSFilterMod]: https://github.com/sorayuki/VSFilterMod/releases/latest
+
+
 
 *这一部分主要是记录了一些文件内容的标题和信息*
 
@@ -430,6 +447,3 @@ Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,注释
 
 `filename: <filename>`
 
-**参考**
-
-[ASS特效标签](https://aegi.vmoe.info/docs/3.2/ASS_Tags/)
