@@ -82,36 +82,48 @@ PlayResY: 720
 ``` yaml
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
 ```
 
-以`[V4+ Styles]`作为这一部分的开始，紧跟着第二行`Format:`基本也是固定的，而`Style`行的各个**值**和`Format`行的各个**名字**之间是一一对应关系。这个部分就像是一张表单，`Format`行就是表头，`Style`行就是往表格里填的数据，大概就是这么一个关系，一个脚本可以设置多个字幕样式。
+![](images\StyleEditor.png)
 
-下面讲一下每个名字的具体意义：
+以 `[V4+ Styles]` 作为这一部分的开始，紧跟着第二行 `Format:` 也是固定的。
+而 `Style` 行的各个**值**和 `Format` 行的各个**名字**之间是一一对应关系。
+这个部分就像是一张表单，`Format` 行就是表头，`Style` 行就是往表格里填的数据，大概就是这么一个关系，一个脚本可以设置多个字幕样式。
 
-* `Name`：样式名字
-* `FontName`：字体名称
-* `Fontsize`：字体大小
-* `PrimaryColour`：主要填充颜色
-* `SecondaryColour`：次要填充颜色，用于标准卡拉OK模式下的预填充
-* `OutlineColour`：字体边框颜色
-* `BackColour`：字体阴影色
-* `Bold`：粗体，**1开启，0关闭**
-* `Italic`：斜体，**1开启，0关闭**
-* `Underline`：下划线，**1开启，0关闭**
-* `StrikeOut`：删除线，**1开启，0关闭**
-* `ScaleX`：宽度缩放，单位为`%`，默认`100`
-* `ScaleY`：高度缩放，单位为`%`，默认`100`
-* `Spacing`：字体间距
-* `Angle`：旋转角度
-* `BorderStyle`：边框样式；默认为`1`，即使用正常字体边框，设置为`3`时，则使用不透明背景取代字体边框
-* `Outline`：边框宽度
-* `Shadow`：阴影距离
+下面讲一下每个字段的具体意义：
+
+* `Name`：样式名称
+* 字体
+    * `FontName`：字体名称
+    * `Fontsize`：字体大小
+    * `Bold`：粗体，**1开启，0关闭**
+    * `Italic`：斜体，**1开启，0关闭**
+    * `Underline`：下划线，**1开启，0关闭**
+    * `StrikeOut`：删除线，**1开启，0关闭**
+* 颜色
+    * `PrimaryColour`：主要填充颜色
+    * `SecondaryColour`：次要填充颜色，用于标准卡拉OK模式下的预填充
+    * `OutlineColour`：字体边框颜色
+    * `BackColour`：字体阴影色
+* 边距
+    * `MarginL`：左边距
+    * `MarginR`：右边距
+    * `MarginV`：垂直边距
 * `Alignment`：字幕对齐方式
-* `MarginL`：左边距
-* `MarginR`：右边距
-* `MarginV`：垂直边距
-* `Encoding`：字体编码；默认为`1`
+边框
+    * `Outline`：边框宽度
+    * `Shadow`：阴影距离
+    * `BorderStyle`：边框样式  
+        + 默认为 `1`，即使用正常字体边框；  
+        + 设置为 `3` 时，则使用不透明背景取代字体边框
+* 杂项
+    * `ScaleX`：水平缩放。默认 `100`，单位为 `%`
+    * `ScaleY`：垂直缩放。默认 `100`，单位为 `%`
+    * `Angle`：逆时针旋转角度
+    * `Spacing`：额外字体间距
+    * `Encoding`：字体编码。默认为 `1`
+
 
 ## 第三部分 [Events]
 
